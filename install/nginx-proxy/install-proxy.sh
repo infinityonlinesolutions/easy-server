@@ -1,7 +1,7 @@
 #!/bin/bash
 
-NGINX_PROXY_EMAIL_ADDRESS=your.email@example.com
-NGINX_PROXY_BASE_PATH=~/server/proxy/
+NGINX_PROXY_EMAIL_ADDRESS=support@infinityonlinesolutions.com
+NGINX_PROXY_BASE_PATH=/home/$USER/server/proxy/
 NGINX_PROXY_AUTOMATION_PATH=compose
 NGINX_PROXY_DATA_FILES=data
 
@@ -14,7 +14,7 @@ git clone --recurse-submodules https://github.com/evertramos/nginx-proxy-automat
 cd $NGINX_PROXY_AUTOMATION_PATH
 
 # Get current IP Address
-NET_INTERFACES=( eth0 ens3 ens4)
+NET_INTERFACES=( eth0 ens18 )
 for i in "${NET_INTERFACES[@]}"; do
   NET_IP=$(ip address show $i | grep "inet\b" | head -n 1 | awk '{print $2}' | cut -d/ -f1)
   if [[ $NET_IP =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
