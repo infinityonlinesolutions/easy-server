@@ -1,7 +1,7 @@
 #!/bin/bash
 
 NGINX_PROXY_EMAIL_ADDRESS=support@infinityonlinesolutions.com
-NGINX_PROXY_BASE_PATH=/home/$USER/server/proxy/
+NGINX_PROXY_BASE_PATH=/home/admin/server/proxy/
 NGINX_PROXY_AUTOMATION_PATH=compose
 NGINX_PROXY_DATA_FILES=data
 
